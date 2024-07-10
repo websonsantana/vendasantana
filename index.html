@@ -32,15 +32,18 @@
         }
 
         .shopee {
-            background-color: #ff5722; /* Cor da Shopee */
+            background-color: #ff5722;
+            /* Cor da Shopee */
         }
 
         .mercado-livre {
-            background-color: #ffe600; /* Cor do Mercado Livre */
+            background-color: #ffe600;
+            /* Cor do Mercado Livre */
         }
 
         .magazine-luiza {
-            background-color: #007bff; /* Cor da Magazine Luiza */
+            background-color: #007bff;
+            /* Cor da Magazine Luiza */
         }
 
         .products {
@@ -56,18 +59,40 @@
             border-radius: 10px;
             padding: 10px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
         .product img {
             max-width: 70%;
             height: auto;
             border-bottom: 1px solid #ccc;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+
+        .product:hover img {
+            transform: scale(1.1);
+        }
+
+        .description {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-height: 3em;
+            transition: max-height 0.3s;
+        }
+
+        .product:hover .description {
+            max-height: 100%;
+            -webkit-line-clamp: unset;
         }
 
         img {
-            width: 100px;
-            border-radius: 10px;
+            width: 150px;
+			border-radius:15px;
         }
 
         @media (max-width: 1200px) {
@@ -87,7 +112,6 @@
                 grid-template-columns: 3, 1fr;
             }
         }
-         
     </style>
 </head>
 
@@ -98,54 +122,29 @@
                 <img src="shopeebranco.png" alt="Logo Shopee">
             </div>
             <div class="products">
-                <!-- Repita este bloco para cada produto -->
                 <div class="product">
                     <img src="Frigideira.jpg" alt="Produto Shopee">
-                    <p>Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
+                    <p class="description">Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
                 </div>
                 <div class="product">
                     <img src="Frigideira.jpg" alt="Produto Shopee">
-                    <p>Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
+                    <p class="description">Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
                 </div>
-                <div class="product">
+               <div class="product">
                     <img src="Frigideira.jpg" alt="Produto Shopee">
-                    <p>Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
+                    <p class="description">Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
                 </div>
-                <div class="product">
+				<div class="product">
                     <img src="Frigideira.jpg" alt="Produto Shopee">
-                    <p>Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
+                    <p class="description">Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
                 </div>
-                <div class="product">
+				<div class="product">
                     <img src="Frigideira.jpg" alt="Produto Shopee">
-                    <p>Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
+                    <p class="description">Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
                 </div>
-                <div class="product">
+				<div class="product">
                     <img src="Frigideira.jpg" alt="Produto Shopee">
-                    <p>Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
-                </div>
-                <div class="product">
-                    <img src="Frigideira.jpg" alt="Produto Shopee">
-                    <p>Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
-                </div>
-                <div class="product">
-                    <img src="Frigideira.jpg" alt="Produto Shopee">
-                    <p>Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
-                </div>
-                <div class="product">
-                    <img src="Frigideira.jpg" alt="Produto Shopee">
-                    <p>Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
-                </div>
-                <div class="product">
-                    <img src="Frigideira.jpg" alt="Produto Shopee">
-                    <p>Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
-                </div>
-                <div class="product">
-                    <img src="Frigideira.jpg" alt="Produto Shopee">
-                    <p>Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
-                </div>
-                <div class="product">
-                    <img src="puf.jpg" alt="Produto Shopee">
-                    <p>Puff Gigante Redondo140x20 Sem Enchimento Suede Premium Linha Gold</p>
+                    <p class="description">Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
                 </div>
             </div>
         </div>
@@ -155,55 +154,31 @@
                 <img src="mercadolivre.png" alt="Logo Mercado Livre">
             </div>
             <div class="products">
-                <!-- Repita este bloco para cada produto -->
                 <div class="product">
                     <img src="relogio.jpg" alt="Produto Mercado Livre">
-                    <p>Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
+                    <p class="description">Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
                 </div>
                 <div class="product">
                     <img src="relogio.jpg" alt="Produto Mercado Livre">
-                    <p>Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
+                    <p class="description">Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
                 </div>
                 <div class="product">
                     <img src="relogio.jpg" alt="Produto Mercado Livre">
-                    <p>Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
+                    <p class="description">Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
                 </div>
-                <div class="product">
+				<div class="product">
                     <img src="relogio.jpg" alt="Produto Mercado Livre">
-                    <p>Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
+                    <p class="description">Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
                 </div>
-                <div class="product">
+				<div class="product">
                     <img src="relogio.jpg" alt="Produto Mercado Livre">
-                    <p>Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
+                    <p class="description">Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
                 </div>
-                <div class="product">
+				<div class="product">
                     <img src="relogio.jpg" alt="Produto Mercado Livre">
-                    <p>Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
+                    <p class="description">Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
                 </div>
-                <div class="product">
-                    <img src="relogio.jpg" alt="Produto Mercado Livre">
-                    <p>Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
-                </div>
-                <div class="product">
-                    <img src="relogio.jpg" alt="Produto Mercado Livre">
-                    <p>Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
-                </div>
-                <div class="product">
-                    <img src="relogio.jpg" alt="Produto Mercado Livre">
-                    <p>Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
-                </div>
-                <div class="product">
-                    <img src="relogio.jpg" alt="Produto Mercado Livre">
-                    <p>Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
-                </div>
-                <div class="product">
-                    <img src="relogio.jpg" alt="Produto Mercado Livre">
-                    <p>Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
-                </div>
-                <div class="product">
-                    <img src="relogio.jpg" alt="Produto Mercado Livre">
-                    <p>Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
-                </div>
+				
             </div>
         </div>
 
@@ -214,52 +189,30 @@
             <div class="products">
                 <div class="product">
                     <img src="guardaroupa.jpg" alt="Produto Magazine Luiza">
-                    <p>Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
+                    <p class="description">Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
                 </div>
                 <div class="product">
                     <img src="guardaroupa.jpg" alt="Produto Magazine Luiza">
-                    <p>Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
+                    <p class="description">Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
                 </div>
-                <div class="product">
+               <div class="product">
                     <img src="guardaroupa.jpg" alt="Produto Magazine Luiza">
-                    <p>Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
+                    <p class="description">Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
                 </div>
-                <div class="product">
+				<div class="product">
+               
+			   <img src="guardaroupa.jpg" alt="Produto Magazine Luiza">
+                    <p class="description">Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
+                </div>
+				<div class="product">
                     <img src="guardaroupa.jpg" alt="Produto Magazine Luiza">
-                    <p>Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
+                    <p class="description">Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
                 </div>
-                <div class="product">
+				<div class="product">
                     <img src="guardaroupa.jpg" alt="Produto Magazine Luiza">
-                    <p>Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
+                    <p class="description">Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
                 </div>
-                <div class="product">
-                    <img src="guardaroupa.jpg" alt="Produto Magazine Luiza">
-                    <p>Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
-                </div>
-                <div class="product">
-                    <img src="guardaroupa.jpg" alt="Produto Magazine Luiza">
-                    <p>Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
-                </div>
-                <div class="product">
-                    <img src="guardaroupa.jpg" alt="Produto Magazine Luiza">
-                    <p>Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
-                </div>
-                <div class="product">
-                    <img src="guardaroupa.jpg" alt="Produto Magazine Luiza">
-                    <p>Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
-                </div>
-                <div class="product">
-                    <img src="guardaroupa.jpg" alt="Produto Magazine Luiza">
-                    <p>Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
-                </div>
-                <div class="product">
-                    <img src="guardaroupa.jpg" alt="Produto Magazine Luiza">
-                    <p>Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
-                </div>
-                <div class="product">
-                    <img src="guardaroupa.jpg" alt="Produto Magazine Luiza">
-                    <p>Guarda-Roupa Casal 3 Portas com Espelho Central e 4 Gavetas Costa Rica Sallêto Móveis</p>
-                </div>
+			   
             </div>
         </div>
     </div>

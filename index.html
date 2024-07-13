@@ -9,8 +9,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            margin: 10;
+            padding: 10;
             box-sizing: border-box;
             max-width: 100%;
         }
@@ -55,7 +55,7 @@
 
         .products {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 5px;
             margin-top: 10px;
         }
@@ -129,6 +129,25 @@
 		hr {
 		color:white;
 		}
+		.thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .thumbnail {
+            width:27% ;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: border 0.3s ease;
+			margin: 2px;
+        }
+
+        .thumbnail:hover {
+            border: 3px solid #fff;
+        }
+		
     </style>
 	
 	
@@ -144,20 +163,28 @@
 <body>
     <div class="container">
         <div class="affiliation shopee">
-            <div class="logo"> 
+            <div class="logo">
                 <a href="https://mycollection.shop/webson?share_channel_code=1 "><img src="shopeebranco.png" alt="Logo Shopee"></a>
             </div>
-		<HR>
+            <hr>
             <div class="products">
-                <!-- Produtos da Shopee -->
+                <!-- Produto Shopee -->
                 <div class="product">
-                    <img src="Frigideira.jpg" alt="Produto Shopee">
-                    <p class="description">Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
+				<p class="description">Frigideira Antiaderente 3 Furos Divisórias Fritar Ovo Lanche Hambúrguer Jogo de Panelas Multiuso</p>
+                    <img class="main-image" src="Frigideira.jpg" alt="Frigideira">
+                    <div class="thumbnails">
+                        <img class="thumbnail" src="Frigideira.jpg" alt="Miniatura 1">
+                        <img class="thumbnail" src="relogio.jpg" alt="Miniatura 2">
+                        <img class="thumbnail" src="guardaroupa.jpg" alt="Miniatura 3">
+                        
+                    </div>
                 </div>
-                <!-- Mais produtos da Shopee -->
-            </div>
-        </div>
-
+				   </div>
+                </div>
+				  
+             
+                
+    
         <div class="affiliation mercado-livre">
             <div class="logo">
                 <img src="mercadolivre.png" alt="Logo Mercado Livre">
@@ -166,9 +193,9 @@
             <div class="products">
                 <!-- Produtos do Mercado Livre -->
                 <div class="product">
-                    <img src="relogio.jpg" alt="Produto Mercado Livre">
-                    <p class="description">Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
-                </div>
+				<p class="description">Relógio Smartwatch Ultra 9 Plus Pro Max 49mm Lançamento 2024</p>
+                       <img src="relogio.jpg" alt="Produto Mercado Livre">
+                    </div>
                 <!-- Mais produtos do Mercado Livre -->
             </div>
         </div>
@@ -203,6 +230,23 @@
             </div>
         </div>
     </div>
+	<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const products = document.querySelectorAll('.product');
+
+            products.forEach(product => {
+                const thumbnails = product.querySelectorAll('.thumbnail');
+                const mainImage = product.querySelector('.main-image');
+
+                thumbnails.forEach(thumbnail => {
+                    thumbnail.addEventListener('click', function () {
+                        const newImageSrc = thumbnail.getAttribute('src');
+                        mainImage.setAttribute('src', newImageSrc);
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>	
